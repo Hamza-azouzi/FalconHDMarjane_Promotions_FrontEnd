@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/marjane.css" />
+    <link rel="stylesheet" href="./css/bulma.css" />
+    <title>Marjane</title>
+  </head>
+  <body class="hero is-fullheight is-flex is-align-items-center">
+    <%- include('partials/navigation')%>
+    <div class="hero-body p-1"><%- body %></div>
+    <%- include('partials/footer')%>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./js/marjane.js"></script>
+  </body>
+</html>

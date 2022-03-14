@@ -1,0 +1,119 @@
+<div
+  class="rows is-centred is-flex has-text-centered is-flex-direction-column is-justify-content-space-between is-align-items-center"
+  style="height: 700px; width: 80vw"
+>
+  <div class="has-background-warning box" style="height: 600px; width: 100%">
+    <div
+      id="managerGetsPromotions"
+      class="row is-boxed"
+      style="animation: show 0.5s linear; color: var(--mainColor)"
+    >
+      <table class="table is-fullwidth is-hoverable" style="background: none">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Discount</th>
+            <th>Fidelity</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Stock</th>
+            <th>Product</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%promotions.forEach( promotion => { %>
+
+          <tr>
+            <td><%=promotion.id%></td>
+            <td><%=promotion.discount %></td>
+            <td><%=promotion.fidelity %></td>
+            <td><%=promotion.day %></td>
+            <td><%=promotion.status %></td>
+            <td><%=promotion.currentStock %></td>
+            <td><%=promotion.productId %></td>
+          </tr>
+
+          <% })%>
+        </tbody>
+      </table>
+    </div>
+    <div
+      id="managerGetsProducts"
+      class="row is-boxed"
+      style="animation: show 0.5s linear"
+      hidden
+    >
+      <table class="table is-fullwidth is-hoverable" style="background: none">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%products.forEach( product => { %>
+
+          <tr>
+            <td><%=product.id%></td>
+            <td><%=product.name %></td>
+            <td><%=product.category %></td>
+            <td><%=product.price %></td>
+            <td><%=product.quantity %></td>
+          </tr>
+
+          <% })%>
+        </tbody>
+      </table>
+    </div>
+    <div
+      id="managerAddsPromotions"
+      class="row is-boxed"
+      style="animation: show 0.5s linear"
+      hidden
+    >
+      <h2 class="is-size-4">Add promotions</h2>
+    </div>
+    <div
+      id="managerAddsAisleHolder"
+      class="row is-boxed"
+      style="animation: show 0.5s linear"
+      hidden
+    >
+      <h2 class="is-size-4">Add aisle manager</h2>
+    </div>
+  </div>
+
+  <div class="row is-boxed">
+    <button
+      onclick="getPromotionsTab()"
+      id="getPromotionsButton"
+      class="button is-warning"
+    >
+      Get Promotions
+    </button>
+    <button
+      onclick="getProductsTab()"
+      id="getProductsButton"
+      class="button is-warning"
+    >
+      Get Products
+    </button>
+    <button
+      onclick="addPromotionsTab()"
+      id="addAisleManagerButton"
+      class="button is-warning"
+    >
+      Add Promotion
+    </button>
+    <button
+      onclick="addAisleHolderTab()"
+      id="addPromotionButton"
+      class="button is-warning"
+    >
+      Add Aisle Manager
+    </button>
+  </div>
+</div>

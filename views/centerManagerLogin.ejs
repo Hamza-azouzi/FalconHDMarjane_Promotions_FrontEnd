@@ -1,0 +1,35 @@
+<div class="container">
+  <form
+    class="box has-border-radius-4 has-background-warning p-6"
+    id="centerLoginForm"
+    action="/managerDashboard"
+    method="post"
+  >
+    <div class="field">
+      <label class="label is-size-5" for="Email">Email:</label>
+      <input
+        name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        type="email"
+        class="input is-size-6 has-text-weight-bold"
+        required
+      />
+    </div>
+    <div class="field">
+      <label class="label is-size-5" for="Email">Password:</label>
+      <input
+        name="password"
+        type="password"
+        class="input is-size-6 has-text-weight-bold"
+        required
+      />
+    </div>
+
+    <button
+      class="button is-white has-text-weight-bold is-size-6 is-medium mt-5"
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+</div>
